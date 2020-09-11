@@ -39,7 +39,7 @@ function analyze(words, era) {
       era.analysis = response.result;
       newTimeLine[era.order] = era;
 
-      fs.writeFile('mac.json', JSON.stringify(newTimeLine), function (err) {
+      fs.writeFile('./data/mac.json', JSON.stringify(newTimeLine), function (err) {
         if (err) {
           return console.log(err);
         }
@@ -72,7 +72,7 @@ function loadLyricsForEra(era) {
     var lyricpromises = [];
 
     era.albums.forEach(function (album) {
-      lyricpromises.push(loadLyricsForAlbum(album.lyrics));
+      lyricpromises.push(loadLyricsForAlbum(album.filename));
     });
 
     console.log('Loading lyrics for era: ' + era.era);
