@@ -283,7 +283,7 @@ function compareOrder(a, b) {
 
 function readCombinedData() {
 
-  var url = '../data/mac.json';
+  var url = './data/mac.json';
 
   var xmlhttp = new XMLHttpRequest();
 
