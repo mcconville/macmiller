@@ -92,7 +92,7 @@ function initialize(){
             })
         }
     };
-    xhttp.open("GET", "/data/mac.json", true);
+    xhttp.open("GET", "./data/mac.json", true);
     xhttp.send();
 }
 
