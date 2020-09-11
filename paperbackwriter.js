@@ -37,7 +37,7 @@ function analyze(words, era) {
     .then(response => {
       console.log('running personality insights');
       era.analysis = response.result;
-      newTimeLine[era.order] = era;
+      newTimeLine[era.order -1] = era;
 
       fs.writeFile('./data/mac.json', JSON.stringify(newTimeLine), function (err) {
         if (err) {
