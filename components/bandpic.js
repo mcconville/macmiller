@@ -7,16 +7,22 @@ class Bandpic extends HTMLElement {
     constructor() {
         super();
 
-        let template = document.getElementById('bandpic');
-        let templateContent = template.content;
+        // let template = document.getElementById('bandpic');
+        let templateContent = '<div></div>';
 
         const shadow = this.attachShadow({
                 mode: 'open'
             })
-            .appendChild(templateContent.cloneNode(true));
+            // .appendChild(templateContent.cloneNode(true));
     }
 
-    connectedCallback(){
+    async connectedCallback(){
+
+        let res = await fetch( './components/bandpic.html' )
+        this.shadowRoot.innerHTML = await res.text()
+
+        console.log(this.shadowRoot.innerHTML);
+
         var customElement = this;
         var sr = this.shadowRoot;
         this.band = sr.getElementById('band');
