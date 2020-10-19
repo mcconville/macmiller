@@ -13,8 +13,6 @@ If you don't already have it installed on your computer you can follow instructi
 https://nodejs.org/en/
 
 
-
-
 #### Install a code editor
 
 If you don't already have one, download a code editor. You can install one of them from here:
@@ -22,6 +20,10 @@ If you don't already have one, download a code editor. You can install one of th
 https://atom.io/
 
 https://code.visualstudio.com/
+
+#### Building the Personality Insights datafile
+
+The personality insights data is already checked into this project - it is the file mac.json in the data folder. It was created using 
 
 
 
