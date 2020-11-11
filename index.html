@@ -2,62 +2,33 @@
 
 <head>
     <title>Mac Miller lyric analysis | Psychology of lyrics</title>
-    <!-- <link rel="stylesheet" href="./style/style.css"> -->
-    <link rel="stylesheet" href="https://mcconville.github.io/lyrics/style/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@100;200;300;400;500;600;700&family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
-    <script src="https://mcconville.github.io/lyrics/logic/logic.js"></script>
+    <link rel="stylesheet" href="https://mcconville.github.io/macmiller/style/style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@100;200;300;400;500;600;700&family=Roboto:wght@300;400;500;700;900&display=swap"
+        rel="stylesheet">
 </head>
 
-<body onload="initialize()">
+<body>
     <div id="container" class="container">
-        <section class="banner">
-            <div class="wrap">
-                <img class="logo" src="./images/SVG/logo.svg"></img>
-                <div class="lyricsanalysis">LYRICS PSYCHOLOGY</div>
-            </div>
-            <div class="links">
-                <a class="link" href="comparison.html">COMPARISON</a>
-                <a class="link" href="">ABOUT</a>
-            </div>
-        </section>
+        <banner-element id="banner"></banner-element>
         <div class="frame">
-            <bandpic-element id="bandpics"></bandpic-element>
-            <div class="traitsection">
-                <section class="heading">
-                    <label class="headinglabel">Big 5 Psychology Traits </label>
-                </section>
-                <section class="data">
-                    <datablock-element id='Openness' trait="OPENNESS" value=56></datablock-element>
-                    <datablock-element id='Conscientiousness' trait="CONSCIENCIOUSNESS" value=42></datablock-element>
-                    </datablock-element>
-                    <datablock-element id='Extraversion' trait="EXTRAVERSION" value=79></datablock-element>
-                    </datablock-element>
-                    <datablock-element id='Agreeableness' trait="AGREEABLENESS" value=64></datablock-element>
-                    </datablock-element>
-                    <datablock-element id='Emotional range' trait="EMOTIONAL RANGE" value=88></datablock-element>
-                    </datablock-element>
-                </section>
-            </div>
-            <div>
-                <section class="heading">
-                    <label id="headinglabel" class="headinglabel">BACKGROUND</label>
-                </section>
-                <section class="background">
-                    <label id="moodlabel" class="moodlabel"></label>
-                    <section class="blurb" id="blurb"></section>
-                </section>
-            </div>
-            <div class=traitsection>
-                <section class="heading">
-                    <label class="headinglabel">Albums</label>
-                </section>
-                <section class="tracklist" id="tracklist">
-                </section>
-            </div>
+            <bandpic-element id="bandpics" url="https://mcconville.github.io/macmiller/data/mac.json"></bandpic-element>
+            <datapanel-element id="datapanel" dom="https://mcconville.github.io/macmiller/components/datapanel.html"
+                url="https://mcconville.github.io/macmiller/data/mac.json"></datapanel-element>
+            <blurb-element id="albumblurb" dom="https://mcconville.github.io/macmiller/components/blurb.html"
+                url="https://mcconville.github.io/macmiller/data/mac.json"></blurb-element>
+            <albums-element id="albumpanel" dom="https://mcconville.github.io/macmiller/components/albums.html"
+                url="https://mcconville.github.io/macmiller/data/mac.json"></albums-element>
         </div>
     </div>
 </body>
-<script src="https://mcconville.github.io/lyrics/components/bandpic.js"></script>
-<script src="https://mcconville.github.io/lyrics/components/datablock.js"></script>
-<script src="https://mcconville.github.io/lyrics/logic/siema.js"></script>
+<script src="https://mcconville.github.io/macmiller/components/banner.js"></script>
+<script src="https://mcconville.github.io/macmiller/components/lyricselement.js"></script>
+<script src="https://mcconville.github.io/macmiller/logic/siema.js"></script>
+<script src="https://mcconville.github.io/macmiller./components/bandpic.js"></script>
+<script src="https://mcconville.github.io/macmiller/components/datablock.js"></script>
+<script src="https://mcconville.github.io/macmiller/components/datapanel.js"></script>
+<script src="https://mcconville.github.io/macmiller/components/blurb.js"></script>
+<script src="https://mcconville.github.io/macmiller/components/albums.js"></script>
+
 </html>
